@@ -17,3 +17,4 @@ vignettes/*.pdf
 
 #data too big to handle (lfs is broke)
 .txt
+*.txt
