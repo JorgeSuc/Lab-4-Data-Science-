@@ -8,8 +8,20 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 if (!require("readr"))    {install.packages("readr");   library("readr")}
+if (!require("dplyr"))    {install.packages("dplyr");   library("dplyr")}
 ```
 
+
+```{r testing}
+text <- c("Because I could not stop for Death -",
+          "He kindly stopped for me -",
+          "The Carriage held but just Ourselves -",
+          "and Immortality")
+
+text_df <- data_frame(line = 1:4, text = text)
+
+text_df
+```
 
 ## Obtencion de datos
 
@@ -18,7 +30,6 @@ Se dieron los archivos durante clase
 ## Cargando Archivos
 
 ```{r readData}
-gmaitest <- read_csv("data/test.csv")
 USBlogs <- read_tsv("data/en_US.blogs.txt")
 ```
 
